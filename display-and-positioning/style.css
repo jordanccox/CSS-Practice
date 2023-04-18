@@ -1,0 +1,128 @@
+/*
+Flow of HTML
+
+Without CSS, the browser positions HTML elements top to bottom and left to right.
+
+CSS includes properties that change how the browser positions HTML.
+
+These include:
+
+    * position
+    * display
+    * z-index
+    * float
+    * clear
+
+position
+
+Block-level elements create a block the full width of their parent elements, 
+and they prevent other elements from appearing in the same horizontal space.
+
+Default position for block-level elements: left, new line
+
+This default position can be changed with the position property, which takes one of five values:
+
+    * static - the default value (it does not need to be specified)
+    * relative
+    * absolute
+    * fixed
+    * sticky
+*/
+
+/* position: relative
+
+The relative value positions an element relative to its default position, but does not specify where the element should go.
+For that, you need top, bottom, left, and right -- the values of which position an element away from those sides of the page. 
+
+*/
+
+* {
+    padding: 0; /*Works for making sticky header fill up entire header space, but now it acts more like a fixed header*/
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: green;
+    position: relative;
+    top: 0; /* offset properties (top, bottom, left, right) do not work if postion: relative) */
+    padding: 10px;
+}
+
+.first-content-section {
+    background-color: lightblue;
+    position: relative;
+    top: 40px; /* This moves the section 40px lower than its static position was */
+}
+
+/* position: absolute
+
+This position value places the affected element on the page without regard for the positions of other elements.
+
+*/
+
+#pug {
+    position: relative;
+    top: 70px;
+}
+
+.caption-container {
+    position: absolute;
+    top: 510px;
+    left: 20px;
+    background-color: white;
+    padding: 10px;
+}
+
+figcaption {
+    font-size: 20px;
+}
+
+/* position: fixed
+
+The element will stay in position regardless of scrolling.
+
+*/
+
+.title { /*View in fixed-position-header.html*/
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /*Ensures that header is in front of main content*/
+}
+
+.fixed-example {
+    top: 100px;
+}
+
+/* position: sticky
+
+static and relative stay in the normal flow of the document when scrolling.
+
+fixed and absolute stay in their specified offset positions when scrolling.
+
+sticky keeps the element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled
+further.
+
+*/
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-example {
+    top: 20px; /*Unliked fixed, you do not have to accomadate for the height of the element sticking*/
+}
+
+/*
+
+z-index
+
+*/
