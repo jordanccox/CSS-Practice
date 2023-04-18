@@ -125,4 +125,49 @@ further.
 
 z-index
 
+How far back or forward elements should appear when overlapping
+Does not work on static elements.
+Default z-index = 0. Higher z-indexes appear closer.
+
 */
+
+/* 
+
+display: inline - if an element can be horizontally next to another element
+
+Default display for <em>, <strong>, and <a> is inline. Inline elements are wrapped in a box
+that only takes up amount of space needed to display their content and do not require new line.
+
+Inline elements cannot be altered with height or width.
+
+display property allows you to choose if element is inline, block, or inline-block
+
+display: block
+
+default width = 100% of the page, but their width property can be altered.
+default height = height needed to contain content
+
+default block level elements: <h1> - <h6>, <p>, <div>, <footer>
+
+display: inline-block
+
+can appear next to each other and have their height and width properties changed. Example: <img>
+
+*/
+
+/*
+
+float - move an element as far left or right as you want
+
+Commonly used to wrap text around an image
+
+Works for static and relative position elements
+
+Must have width specified
+
+clear - specifies how elements behave when they bump into one another
+
+Values: left, right, both, none
+
+*/
+
