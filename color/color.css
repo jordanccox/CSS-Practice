@@ -1,0 +1,57 @@
+/* 
+
+Three types of colors in CSS:
+
+    named colors
+    RGB colors
+    HSL colors - hue, saturation, lightness
+
+Color can affect:
+
+    foreground: color 
+    background: background-color
+
+Hexadecimal Colors:
+
+    black: #000000 or #000
+    white: #FFFFFF or #FFF
+    aqua:  #00FFFF or #0FF
+    sienna:#A0522D
+
+RGB Values:
+
+    h1 {
+        color: rgb(23, 45, 23); // Each can have a decimal number from 0 - 255
+    }
+
+Choose either hex or rgb and stick with it to be consistent.
+
+Hue, Saturation, Lightness:
+
+    color: hsl(number between 0-360 representing hue [this is an angle on the color wheel], % representing saturation, % representing lightness);
+
+    Example
+
+    h1 {
+        color: hsl(120, 60%, 70%);
+    }
+
+    Adding opacity:
+
+    color: hsla(120, 50%, 10%, alpha - a decimal number from 0-1);
+
+    When alpha is below 1, any color behind it will blend in.
+
+    Alpha (opacity) in the RGB color scheme:
+
+    color: rgba(100, 230, 10, 0.33);
+
+    color: transparent; // Keyword for 0 opacity
+
+    Alpha in hex:
+    
+    Two degits at the end of the 6 digit hexidecimal value or 1 digit at the end of the 3 digit hex value.
+    Between 00 (transparent) and FF (opaque).
+
+    color: #FFFFFF14
+*/
