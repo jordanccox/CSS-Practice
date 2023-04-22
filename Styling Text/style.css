@@ -1,0 +1,60 @@
+/* 
+
+Typography: Styling and arranging text on a page
+
+font-family
+
+    - changes the font of an element
+    - use quotes when specifying multi-word fonts, such as 'Times New Roman'
+    - web safe fonts: appear on all browsers
+    - fallback fonts are fonts that are used if the primary font is unavailable:
+        - font-family: Carlson, Georgia, 'Times New Roman', serif
+    - serif and sans-serif can be used as final fallback keywords
+
+font-weight
+
+    - boldness or thinness of text
+    - keywords: normal, bold, thin, lighter (one font-weight lighter than parent element), 
+    bolder (one font-weight bolder than parent element)
+    - numerical values: 1 (lightest) - 1000 (boldest). Best to use incremenets of 100
+    - numerical values are not available for all fonts
+    - 400 = normal
+    - 700 = bold
+
+font-style
+
+    - keywords: normal, italic
+
+text-transform:
+
+    - keywords: uppercase, lowercase
+
+Text Layout
+
+    - letter-spacing: sets horizontal spacing between letters
+        - takes length values (px, em)
+    - word-spacing: sets spacing between words.
+        - also takes px or em
+        - em recommended because spacing is based on font-size.
+    - line-height: sets height of text lines
+        - can use unitless number (1.2) which is responsive based on size of font or length values such as px, em, %
+    - text-align: right, center, left, justify
+
+Web fonts
+
+     - Google Fonts and Adobe Fonts host font styles you can link to in html head using <link>
+     - @font-face in CSS can be used to link to relative path of downloaded font
+     
+     
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+
+    @font-face {
+    font-family: 'GlegooBanner';
+    src: url('../fonts/Glegoo-Regular.woff2') format('woff2'),
+        url('../fonts/Glegoo-Regular.woff') format('woff'),
+        url('../fonts/Glegoo-Regular.ttf') format('truetype');
+}
+
+*/
